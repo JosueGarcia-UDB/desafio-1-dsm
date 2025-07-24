@@ -108,6 +108,15 @@
                 android:minHeight="48dp" />
         </RadioGroup>
 
+        <EditText
+            android:id="@+id/etCustomTip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/etCustomTip"
+            android:inputType="numberDecimal"
+            android:visibility="gone"
+            android:minHeight="48dp" />
+
         <Switch
             android:id="@+id/swIVA"
             android:layout_width="wrap_content"
@@ -131,7 +140,7 @@
                 app:icon="@drawable/ic_calculate"
                 android:layout_weight="1"
                 android:layout_marginEnd="10sp"
-                android:textSize="20sp"
+                android:textSize="17sp"
                 />
             <Button
                 android:id="@+id/btnLimpiar"
@@ -142,7 +151,7 @@
                 app:icon="@drawable/ic_cleaning"
                 android:layout_weight="1"
                 android:layout_marginStart="10sp"
-                android:textSize="20sp"
+                android:textSize="17sp"
                 />
         </LinearLayout>
 
