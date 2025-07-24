@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/titleApp"
+        android:textSize="28sp"
+        android:textAlignment="center"
+        android:padding="20sp"
+        android:background="@color/skyblue"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txtTotal"
+            android:textColor="@color/gray"
+            android:textSize="22sp"
+            android:layout_marginTop="20sp"
+            />
+        <EditText
+            android:id="@+id/etTotal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:hint="@string/editTotal"
+            android:inputType="numberDecimal"
+            android:textColor="@color/black"
+            android:layout_marginBottom="20sp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txtPersonas"
+            android:textColor="@color/gray"
+            android:textSize="22sp"
+            />
+        <EditText
+            android:id="@+id/etPersonas"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:hint="@string/editPersonas"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:layout_marginBottom="20sp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txtPropina"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            />
+        <RadioGroup
+            android:id="@+id/rgPropina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10sp"
+            >
+            <RadioButton
+                android:id="@+id/rb10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtPropina10"
+                android:minHeight="48dp" />
+            <RadioButton
+                android:id="@+id/rb15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtPropina15"
+                android:minHeight="48dp" />
+            <RadioButton
+                android:id="@+id/rb20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtPropina20"
+                android:minHeight="48dp" />
+            <RadioButton
+                android:id="@+id/rbOtro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtOtro"
+                android:minHeight="48dp" />
+        </RadioGroup>
+
+        <Switch
+            android:id="@+id/swIVA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtIVA"
+            android:layout_marginTop="10sp"
+            android:minHeight="48dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30sp"
+            >
+            <Button
+                android:id="@+id/btnCalcular"
+                android:layout_width="0dp"
+                android:backgroundTint="@color/green"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_calcular"
+                app:icon="@drawable/ic_calculate"
+                android:layout_weight="1"
+                android:layout_marginEnd="10sp"
+                android:textSize="20sp"
+                />
+            <Button
+                android:id="@+id/btnLimpiar"
+                android:layout_width="0dp"
+                android:backgroundTint="@color/dark_gray"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_limpiar"
+                app:icon="@drawable/ic_cleaning"
+                android:layout_weight="1"
+                android:layout_marginStart="10sp"
+                android:textSize="20sp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llResultados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="30sp"
+            android:padding="15sp"
+            android:background="@android:color/white"
+            android:visibility="gone"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Resultados:"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10sp"
+                />
+            <TextView
+                android:id="@+id/tvPropinaCalculada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Propina: $0.00"
+                android:textSize="18sp"
+                android:layout_marginBottom="5sp"
+                />
+            <TextView
+                android:id="@+id/tvTotalPagar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total a Pagar: $0.00"
+                android:textSize="18sp"
+                android:layout_marginBottom="5sp"
+                />
+            <TextView
+                android:id="@+id/tvPorPersona"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Por Persona: $0.00"
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

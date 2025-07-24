@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Desafio-1-DSM</string>
+    <string name="titleApp">Calculadora de Propinas para grupos tacaños</string>
+
+    <string name="txtTotal">Monto total</string>
+    <string name="editTotal">Monto total a pagar</string>
+
+    <string name="txtPersonas">Personas</string>
+    <string name="editPersonas">Cantidad de personas</string>
+
+<!--  Radio Buttons -->
+    <string name="txtPropina">Propina</string>
+    <string name="txtPropina10">10%</string>
+    <string name="txtPropina15">15%</string>
+    <string name="txtPropina20">20%</string>
+    <string name="txtOtro">Otro</string>
+
+<!--    IVA -->
+    <string name="txtIVA">Incluir IVA 16%</string>
+
+
+    <string name="btn_calcular">Calcular</string>
+    <string name="btn_limpiar">Limpiar</string>
+
+    <string name="resultados">Resultados</string>
+</resources>
