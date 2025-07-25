@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Desafio-1-DSM</string>
-    <string name="titleApp">Calculadora de Propinas para grupos tacaños</string>
+    <string name="titleApp">Calculadora de propinas para grupos tacaños</string>
 
     <string name="txtTotal">Monto total</string>
     <string name="editTotal">Monto total a pagar</string>
@@ -23,10 +23,21 @@
     <string name="btn_calcular">Calcular</string>
     <string name="btn_limpiar">Limpiar</string>
 
-    <string name="resultados">Resultados</string>
+    <!-- Resultados -->
+    <string name="resultados">Resultados:</string>
+    <string name="resultadoPropina">Propina: $ %.2f</string>
+    <string name="resultadoTotal">Total a Pagar: $ %.2f</string>
+    <string name="resultadoPorPersona">Por Persona: $ %.2f</string>
 
-    <!-- Alerts -->
-    <string name="alert_title">Ingrese datos validos</string>
-    <string name="alert_message">Por favor, ingrese valores numéricos válidos en todos los campos.</string>
-    <string name="alert_ok">OK</string>
+    <!-- Errores -->
+    <string name="error_monto_total_invalido">Ingrese un monto total válido y positivo.</string>
+    <string name="error_num_personas_invalido">Ingrese un número de personas válido y mayor que cero.</string>
+    <string name="error_propina_personalizada_invalida">Ingrese un porcentaje de propina válido y positivo.</string>
+    <string name="error_seleccionar_propina">Por favor, seleccione un porcentaje de propina.</string>
+
+    <string name="alert_title_error">Error de Validación</string>
+    <string name="alert_message_campos_invalidos">Hay errores en los campos. Por favor, revíselos.</string>
+    <string name="alert_ok">Entendido</string>
+
+
 </resources>
